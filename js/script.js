@@ -18,7 +18,7 @@ if (userAge < 18) {
 } else {
   var ticketPrice = ticket;
 }
-console.log(ticketPrice)
+console.log(ticketPrice);
 
 // stampare il prezzo del biglietto
-document.getElementById('price').innerHTML = ticketPrice
+document.getElementById('price').innerHTML = ticketPrice.toFixed(2);
