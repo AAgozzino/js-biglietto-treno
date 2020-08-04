@@ -1,12 +1,24 @@
 // chiedere il numero di km
-var kilometri = prompt("Inserisci quanti kilometri vuoi percorrere")
+var kilometri = parseInt(prompt("Inserisci quanti kilometri vuoi percorrere"));
+
 // chiedere l'età del passeggero
-var userAge = prompt("Inserisci l'età del passeggero")
+var userAge = parseInt(prompt("Inserisci l'età del passeggero"));
+
 // calcolare il prezzo totale del viaggio (0.21 €/km)
-var ticket = kilometri * 0.21
+var ticket = kilometri * 0.21;
 console.log(ticket);
+
 // se età < 18 sconto 20%
 // se età >= 65 sconto 40%
 // altrimenti prezzo base
+if (userAge < 18) {
+  var ticketPrice = ticket - (ticket / 5);
+} else if (userAge >= 65) {
+  var ticketPrice = ticket - ((ticket / 5) * 2);
+} else {
+  var ticketPrice = ticket;
+}
+console.log(ticketPrice)
 
 // stampare il prezzo del biglietto
+document.getElementById('price').innerHTML = ticketPrice
