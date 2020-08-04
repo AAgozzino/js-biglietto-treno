@@ -13,12 +13,16 @@ console.log(ticket);
 // altrimenti prezzo base
 if (userAge < 18) {
   var ticketPrice = ticket - (ticket / 5);
+  document.getElementById('discount').innerHTML = "20%";
 } else if (userAge >= 65) {
   var ticketPrice = ticket - ((ticket / 5) * 2);
+  document.getElementById('discount').innerHTML = "40%";
 } else {
   var ticketPrice = ticket;
+  document.getElementById('hide').style.display = "none";
 }
 console.log(ticketPrice);
 
 // stampare il prezzo del biglietto
+document.getElementById("kilometraggio").innerHTML = kilometri
 document.getElementById('price').innerHTML = ticketPrice.toFixed(2);
